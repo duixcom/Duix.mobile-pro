@@ -1,0 +1,678 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E975CC06B3A4882DFAF5246 /* Pods_GJLocalDigitalSDKDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26331A800619039113ADBB84 /* Pods_GJLocalDigitalSDKDemo.framework */; };
+		A0BDCD2F2B44085800A69396 /* GYAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BDCD292B44085700A69396 /* GYAccess.m */; };
+		A0BDCD302B44085800A69396 /* GJDownWavTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BDCD2D2B44085700A69396 /* GJDownWavTool.m */; };
+		A0BDCD312B44085800A69396 /* GJLDigitalAnswerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BDCD2E2B44085700A69396 /* GJLDigitalAnswerModel.m */; };
+		A0C35D382DDC50DC00FA89D5 /* GJLPCMManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C35D362DDC50DC00FA89D5 /* GJLPCMManager.m */; };
+		A0C35D392DDC50DC00FA89D5 /* GJLPLAssetReader.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C35D342DDC50DC00FA89D5 /* GJLPLAssetReader.m */; };
+		A0C35D3D2DDC50E800FA89D5 /* GJLGCDNEWTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C35D3B2DDC50E800FA89D5 /* GJLGCDNEWTimer.m */; };
+		A0C35D412DDC50F700FA89D5 /* UIColor+Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C35D3F2DDC50F700FA89D5 /* UIColor+Expanded.m */; };
+		A0C35E0D2DDC85CC00FA89D5 /* LivePCMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C35E0A2DDC85CC00FA89D5 /* LivePCMViewController.m */; };
+		A0C35E0E2DDC85CC00FA89D5 /* ReadWavPCMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C35E0C2DDC85CC00FA89D5 /* ReadWavPCMViewController.m */; };
+		A0C35E102DDC867A00FA89D5 /* 3.wav in Resources */ = {isa = PBXBuildFile; fileRef = A0C35E0F2DDC867A00FA89D5 /* 3.wav */; };
+		A0C35E122DDC867D00FA89D5 /* 2.wav in Resources */ = {isa = PBXBuildFile; fileRef = A0C35E112DDC867D00FA89D5 /* 2.wav */; };
+		A0E6A18A2B2FEDD000645913 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E6A1892B2FEDD000645913 /* AppDelegate.m */; };
+		A0E6A1902B2FEDD000645913 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A0E6A18F2B2FEDD000645913 /* ViewController.mm */; };
+		A0E6A1932B2FEDD000645913 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0E6A1912B2FEDD000645913 /* Main.storyboard */; };
+		A0E6A1952B2FEDD100645913 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0E6A1942B2FEDD100645913 /* Assets.xcassets */; };
+		A0E6A1982B2FEDD100645913 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0E6A1962B2FEDD100645913 /* LaunchScreen.storyboard */; };
+		A0E6A19B2B2FEDD100645913 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E6A19A2B2FEDD100645913 /* main.m */; };
+		A0E6A1A42B2FEE3100645913 /* GJLocalDigitalSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E6A1A22B2FEE2100645913 /* GJLocalDigitalSDK.framework */; };
+		A0E6A1A52B2FEE3100645913 /* GJLocalDigitalSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A0E6A1A22B2FEE2100645913 /* GJLocalDigitalSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A0E6A1AA2B2FEEA000645913 /* GJCheckNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E6A1A92B2FEEA000645913 /* GJCheckNetwork.m */; };
+		A0E6A1AE2B2FEEFC00645913 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E6A1AC2B2FEEFC00645913 /* OpenUDID.m */; };
+		A0E6A3D92B2FEF0200645913 /* 1.wav in Resources */ = {isa = PBXBuildFile; fileRef = A0E6A1B02B2FEF0000645913 /* 1.wav */; };
+		A0E6A3DA2B2FEF0200645913 /* bg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0E6A1B12B2FEF0000645913 /* bg2.jpg */; };
+		A0E6A6082B2FEF0600645913 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E6A5FF2B2FEF0600645913 /* SVRadialGradientLayer.m */; };
+		A0E6A6092B2FEF0600645913 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E6A6022B2FEF0600645913 /* SVProgressAnimatedView.m */; };
+		A0E6A60A2B2FEF0600645913 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E6A6042B2FEF0600645913 /* SVProgressHUD.m */; };
+		A0E6A60B2B2FEF0600645913 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E6A6052B2FEF0600645913 /* SVIndefiniteAnimatedView.m */; };
+		A0E6A60C2B2FEF0600645913 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A0E6A6062B2FEF0600645913 /* SVProgressHUD.bundle */; };
+		A0E6A6182B2FEFDA00645913 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E6A6162B2FEFDA00645913 /* HttpClient.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A0E6A1A62B2FEE3100645913 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A0E6A1A52B2FEE3100645913 /* GJLocalDigitalSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		11014F45554AF6DBA87472A4 /* Pods-GJLocalDigitalSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GJLocalDigitalSDKDemo.release.xcconfig"; path = "Target Support Files/Pods-GJLocalDigitalSDKDemo/Pods-GJLocalDigitalSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
+		26331A800619039113ADBB84 /* Pods_GJLocalDigitalSDKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GJLocalDigitalSDKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4098759FF12010E3C19BD570 /* Pods-GJLocalDigitalSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GJLocalDigitalSDKDemo.debug.xcconfig"; path = "Target Support Files/Pods-GJLocalDigitalSDKDemo/Pods-GJLocalDigitalSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		A0BDCD282B44085700A69396 /* GYAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYAccess.h; sourceTree = "<group>"; };
+		A0BDCD292B44085700A69396 /* GYAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYAccess.m; sourceTree = "<group>"; };
+		A0BDCD2B2B44085700A69396 /* GJDownWavTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJDownWavTool.h; sourceTree = "<group>"; };
+		A0BDCD2C2B44085700A69396 /* GJLDigitalAnswerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJLDigitalAnswerModel.h; sourceTree = "<group>"; };
+		A0BDCD2D2B44085700A69396 /* GJDownWavTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJDownWavTool.m; sourceTree = "<group>"; };
+		A0BDCD2E2B44085700A69396 /* GJLDigitalAnswerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJLDigitalAnswerModel.m; sourceTree = "<group>"; };
+		A0C35D332DDC50DC00FA89D5 /* GJLPLAssetReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GJLPLAssetReader.h; sourceTree = "<group>"; };
+		A0C35D342DDC50DC00FA89D5 /* GJLPLAssetReader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GJLPLAssetReader.m; sourceTree = "<group>"; };
+		A0C35D352DDC50DC00FA89D5 /* GJLPCMManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GJLPCMManager.h; sourceTree = "<group>"; };
+		A0C35D362DDC50DC00FA89D5 /* GJLPCMManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GJLPCMManager.m; sourceTree = "<group>"; };
+		A0C35D3A2DDC50E800FA89D5 /* GJLGCDNEWTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GJLGCDNEWTimer.h; sourceTree = "<group>"; };
+		A0C35D3B2DDC50E800FA89D5 /* GJLGCDNEWTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GJLGCDNEWTimer.m; sourceTree = "<group>"; };
+		A0C35D3E2DDC50F700FA89D5 /* UIColor+Expanded.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Expanded.h"; sourceTree = "<group>"; };
+		A0C35D3F2DDC50F700FA89D5 /* UIColor+Expanded.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Expanded.m"; sourceTree = "<group>"; };
+		A0C35E092DDC85CC00FA89D5 /* LivePCMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LivePCMViewController.h; sourceTree = "<group>"; };
+		A0C35E0A2DDC85CC00FA89D5 /* LivePCMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LivePCMViewController.m; sourceTree = "<group>"; };
+		A0C35E0B2DDC85CC00FA89D5 /* ReadWavPCMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReadWavPCMViewController.h; sourceTree = "<group>"; };
+		A0C35E0C2DDC85CC00FA89D5 /* ReadWavPCMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReadWavPCMViewController.m; sourceTree = "<group>"; };
+		A0C35E0F2DDC867A00FA89D5 /* 3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 3.wav; sourceTree = "<group>"; };
+		A0C35E112DDC867D00FA89D5 /* 2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 2.wav; sourceTree = "<group>"; };
+		A0E6A1852B2FEDD000645913 /* GJLocalDigitalSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GJLocalDigitalSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0E6A1882B2FEDD000645913 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A0E6A1892B2FEDD000645913 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A0E6A18E2B2FEDD000645913 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A0E6A18F2B2FEDD000645913 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		A0E6A1922B2FEDD000645913 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A0E6A1942B2FEDD100645913 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A0E6A1972B2FEDD100645913 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A0E6A1992B2FEDD100645913 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0E6A19A2B2FEDD100645913 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A0E6A1A22B2FEE2100645913 /* GJLocalDigitalSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GJLocalDigitalSDK.framework; sourceTree = "<group>"; };
+		A0E6A1A82B2FEEA000645913 /* GJCheckNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJCheckNetwork.h; sourceTree = "<group>"; };
+		A0E6A1A92B2FEEA000645913 /* GJCheckNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJCheckNetwork.m; sourceTree = "<group>"; };
+		A0E6A1AC2B2FEEFC00645913 /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
+		A0E6A1AD2B2FEEFC00645913 /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
+		A0E6A1B02B2FEF0000645913 /* 1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 1.wav; sourceTree = "<group>"; };
+		A0E6A1B12B2FEF0000645913 /* bg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg2.jpg; sourceTree = "<group>"; };
+		A0E6A5FF2B2FEF0600645913 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		A0E6A6002B2FEF0600645913 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		A0E6A6012B2FEF0600645913 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		A0E6A6022B2FEF0600645913 /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressAnimatedView.m; sourceTree = "<group>"; };
+		A0E6A6032B2FEF0600645913 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		A0E6A6042B2FEF0600645913 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		A0E6A6052B2FEF0600645913 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		A0E6A6062B2FEF0600645913 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		A0E6A6072B2FEF0600645913 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
+		A0E6A6162B2FEFDA00645913 /* HttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpClient.m; sourceTree = "<group>"; };
+		A0E6A6172B2FEFDA00645913 /* HttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A0E6A1822B2FEDD000645913 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E975CC06B3A4882DFAF5246 /* Pods_GJLocalDigitalSDKDemo.framework in Frameworks */,
+				A0E6A1A42B2FEE3100645913 /* GJLocalDigitalSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5DAC3E56DB8592523319A9BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26331A800619039113ADBB84 /* Pods_GJLocalDigitalSDKDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A0BDCD272B44085700A69396 /* GYAccess */ = {
+			isa = PBXGroup;
+			children = (
+				A0BDCD282B44085700A69396 /* GYAccess.h */,
+				A0BDCD292B44085700A69396 /* GYAccess.m */,
+			);
+			path = GYAccess;
+			sourceTree = "<group>";
+		};
+		A0BDCD2A2B44085700A69396 /* DigitalAnswerModel */ = {
+			isa = PBXGroup;
+			children = (
+				A0BDCD2B2B44085700A69396 /* GJDownWavTool.h */,
+				A0BDCD2D2B44085700A69396 /* GJDownWavTool.m */,
+				A0BDCD2E2B44085700A69396 /* GJLDigitalAnswerModel.m */,
+				A0BDCD2C2B44085700A69396 /* GJLDigitalAnswerModel.h */,
+			);
+			path = DigitalAnswerModel;
+			sourceTree = "<group>";
+		};
+		A0C35D372DDC50DC00FA89D5 /* GJLPLAssetReader */ = {
+			isa = PBXGroup;
+			children = (
+				A0C35D332DDC50DC00FA89D5 /* GJLPLAssetReader.h */,
+				A0C35D342DDC50DC00FA89D5 /* GJLPLAssetReader.m */,
+				A0C35D352DDC50DC00FA89D5 /* GJLPCMManager.h */,
+				A0C35D362DDC50DC00FA89D5 /* GJLPCMManager.m */,
+			);
+			path = GJLPLAssetReader;
+			sourceTree = "<group>";
+		};
+		A0C35D3C2DDC50E800FA89D5 /* GCDTimer */ = {
+			isa = PBXGroup;
+			children = (
+				A0C35D3A2DDC50E800FA89D5 /* GJLGCDNEWTimer.h */,
+				A0C35D3B2DDC50E800FA89D5 /* GJLGCDNEWTimer.m */,
+			);
+			path = GCDTimer;
+			sourceTree = "<group>";
+		};
+		A0C35D402DDC50F700FA89D5 /* UIColor+Expanded */ = {
+			isa = PBXGroup;
+			children = (
+				A0C35D3E2DDC50F700FA89D5 /* UIColor+Expanded.h */,
+				A0C35D3F2DDC50F700FA89D5 /* UIColor+Expanded.m */,
+			);
+			path = "UIColor+Expanded";
+			sourceTree = "<group>";
+		};
+		A0E6A17C2B2FEDD000645913 = {
+			isa = PBXGroup;
+			children = (
+				A0E6A1872B2FEDD000645913 /* GJLocalDigitalSDKDemo */,
+				A0E6A1862B2FEDD000645913 /* Products */,
+				E4A4959AE1F7315619A766AF /* Pods */,
+				5DAC3E56DB8592523319A9BB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A0E6A1862B2FEDD000645913 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A0E6A1852B2FEDD000645913 /* GJLocalDigitalSDKDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A0E6A1872B2FEDD000645913 /* GJLocalDigitalSDKDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A0C35D402DDC50F700FA89D5 /* UIColor+Expanded */,
+				A0C35D3C2DDC50E800FA89D5 /* GCDTimer */,
+				A0C35D372DDC50DC00FA89D5 /* GJLPLAssetReader */,
+				A0BDCD2A2B44085700A69396 /* DigitalAnswerModel */,
+				A0BDCD272B44085700A69396 /* GYAccess */,
+				A0E6A6152B2FEFDA00645913 /* HttpClient */,
+				A0E6A5FE2B2FEF0600645913 /* SVProgressHUD */,
+				A0E6A1AF2B2FEF0000645913 /* Resources */,
+				A0E6A1AB2B2FEEFC00645913 /* OpenUDID-master */,
+				A0E6A1A72B2FEEA000645913 /* GJCheckNetwork */,
+				A0E6A1A12B2FEE0000645913 /* GJLocalDigitalSDK */,
+				A0E6A1882B2FEDD000645913 /* AppDelegate.h */,
+				A0E6A1892B2FEDD000645913 /* AppDelegate.m */,
+				A0E6A18E2B2FEDD000645913 /* ViewController.h */,
+				A0E6A18F2B2FEDD000645913 /* ViewController.mm */,
+				A0C35E092DDC85CC00FA89D5 /* LivePCMViewController.h */,
+				A0C35E0A2DDC85CC00FA89D5 /* LivePCMViewController.m */,
+				A0C35E0B2DDC85CC00FA89D5 /* ReadWavPCMViewController.h */,
+				A0C35E0C2DDC85CC00FA89D5 /* ReadWavPCMViewController.m */,
+				A0E6A1912B2FEDD000645913 /* Main.storyboard */,
+				A0E6A1942B2FEDD100645913 /* Assets.xcassets */,
+				A0E6A1962B2FEDD100645913 /* LaunchScreen.storyboard */,
+				A0E6A1992B2FEDD100645913 /* Info.plist */,
+				A0E6A19A2B2FEDD100645913 /* main.m */,
+			);
+			path = GJLocalDigitalSDKDemo;
+			sourceTree = "<group>";
+		};
+		A0E6A1A12B2FEE0000645913 /* GJLocalDigitalSDK */ = {
+			isa = PBXGroup;
+			children = (
+				A0E6A1A22B2FEE2100645913 /* GJLocalDigitalSDK.framework */,
+			);
+			path = GJLocalDigitalSDK;
+			sourceTree = "<group>";
+		};
+		A0E6A1A72B2FEEA000645913 /* GJCheckNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				A0E6A1A82B2FEEA000645913 /* GJCheckNetwork.h */,
+				A0E6A1A92B2FEEA000645913 /* GJCheckNetwork.m */,
+			);
+			path = GJCheckNetwork;
+			sourceTree = "<group>";
+		};
+		A0E6A1AB2B2FEEFC00645913 /* OpenUDID-master */ = {
+			isa = PBXGroup;
+			children = (
+				A0E6A1AC2B2FEEFC00645913 /* OpenUDID.m */,
+				A0E6A1AD2B2FEEFC00645913 /* OpenUDID.h */,
+			);
+			path = "OpenUDID-master";
+			sourceTree = "<group>";
+		};
+		A0E6A1AF2B2FEF0000645913 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A0C35E112DDC867D00FA89D5 /* 2.wav */,
+				A0C35E0F2DDC867A00FA89D5 /* 3.wav */,
+				A0E6A1B02B2FEF0000645913 /* 1.wav */,
+				A0E6A1B12B2FEF0000645913 /* bg2.jpg */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A0E6A5FE2B2FEF0600645913 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				A0E6A5FF2B2FEF0600645913 /* SVRadialGradientLayer.m */,
+				A0E6A6002B2FEF0600645913 /* SVIndefiniteAnimatedView.h */,
+				A0E6A6012B2FEF0600645913 /* SVProgressHUD.h */,
+				A0E6A6022B2FEF0600645913 /* SVProgressAnimatedView.m */,
+				A0E6A6032B2FEF0600645913 /* SVRadialGradientLayer.h */,
+				A0E6A6042B2FEF0600645913 /* SVProgressHUD.m */,
+				A0E6A6052B2FEF0600645913 /* SVIndefiniteAnimatedView.m */,
+				A0E6A6062B2FEF0600645913 /* SVProgressHUD.bundle */,
+				A0E6A6072B2FEF0600645913 /* SVProgressAnimatedView.h */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		A0E6A6152B2FEFDA00645913 /* HttpClient */ = {
+			isa = PBXGroup;
+			children = (
+				A0E6A6162B2FEFDA00645913 /* HttpClient.m */,
+				A0E6A6172B2FEFDA00645913 /* HttpClient.h */,
+			);
+			path = HttpClient;
+			sourceTree = "<group>";
+		};
+		E4A4959AE1F7315619A766AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4098759FF12010E3C19BD570 /* Pods-GJLocalDigitalSDKDemo.debug.xcconfig */,
+				11014F45554AF6DBA87472A4 /* Pods-GJLocalDigitalSDKDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A0E6A1842B2FEDD000645913 /* GJLocalDigitalSDKDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0E6A19E2B2FEDD100645913 /* Build configuration list for PBXNativeTarget "GJLocalDigitalSDKDemo" */;
+			buildPhases = (
+				246A9423C56DB6C60F0079C6 /* [CP] Check Pods Manifest.lock */,
+				A0E6A1812B2FEDD000645913 /* Sources */,
+				A0E6A1822B2FEDD000645913 /* Frameworks */,
+				A0E6A1832B2FEDD000645913 /* Resources */,
+				A0E6A1A62B2FEE3100645913 /* Embed Frameworks */,
+				8571ACCC00C1F2907738BBF4 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GJLocalDigitalSDKDemo;
+			productName = GJLocalDigitalSDKDemo;
+			productReference = A0E6A1852B2FEDD000645913 /* GJLocalDigitalSDKDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A0E6A17D2B2FEDD000645913 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					A0E6A1842B2FEDD000645913 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = A0E6A1802B2FEDD000645913 /* Build configuration list for PBXProject "GJLocalDigitalSDKDemo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A0E6A17C2B2FEDD000645913;
+			productRefGroup = A0E6A1862B2FEDD000645913 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A0E6A1842B2FEDD000645913 /* GJLocalDigitalSDKDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A0E6A1832B2FEDD000645913 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0C35E102DDC867A00FA89D5 /* 3.wav in Resources */,
+				A0E6A1982B2FEDD100645913 /* LaunchScreen.storyboard in Resources */,
+				A0E6A60C2B2FEF0600645913 /* SVProgressHUD.bundle in Resources */,
+				A0C35E122DDC867D00FA89D5 /* 2.wav in Resources */,
+				A0E6A1952B2FEDD100645913 /* Assets.xcassets in Resources */,
+				A0E6A3D92B2FEF0200645913 /* 1.wav in Resources */,
+				A0E6A3DA2B2FEF0200645913 /* bg2.jpg in Resources */,
+				A0E6A1932B2FEDD000645913 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		246A9423C56DB6C60F0079C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GJLocalDigitalSDKDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8571ACCC00C1F2907738BBF4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GJLocalDigitalSDKDemo/Pods-GJLocalDigitalSDKDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GJLocalDigitalSDKDemo/Pods-GJLocalDigitalSDKDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GJLocalDigitalSDKDemo/Pods-GJLocalDigitalSDKDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A0E6A1812B2FEDD000645913 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0E6A6082B2FEF0600645913 /* SVRadialGradientLayer.m in Sources */,
+				A0C35D3D2DDC50E800FA89D5 /* GJLGCDNEWTimer.m in Sources */,
+				A0BDCD312B44085800A69396 /* GJLDigitalAnswerModel.m in Sources */,
+				A0C35E0D2DDC85CC00FA89D5 /* LivePCMViewController.m in Sources */,
+				A0C35E0E2DDC85CC00FA89D5 /* ReadWavPCMViewController.m in Sources */,
+				A0E6A1AA2B2FEEA000645913 /* GJCheckNetwork.m in Sources */,
+				A0C35D412DDC50F700FA89D5 /* UIColor+Expanded.m in Sources */,
+				A0BDCD2F2B44085800A69396 /* GYAccess.m in Sources */,
+				A0E6A6182B2FEFDA00645913 /* HttpClient.m in Sources */,
+				A0C35D382DDC50DC00FA89D5 /* GJLPCMManager.m in Sources */,
+				A0C35D392DDC50DC00FA89D5 /* GJLPLAssetReader.m in Sources */,
+				A0E6A1902B2FEDD000645913 /* ViewController.mm in Sources */,
+				A0E6A18A2B2FEDD000645913 /* AppDelegate.m in Sources */,
+				A0E6A60B2B2FEF0600645913 /* SVIndefiniteAnimatedView.m in Sources */,
+				A0BDCD302B44085800A69396 /* GJDownWavTool.m in Sources */,
+				A0E6A60A2B2FEF0600645913 /* SVProgressHUD.m in Sources */,
+				A0E6A19B2B2FEDD100645913 /* main.m in Sources */,
+				A0E6A1AE2B2FEEFC00645913 /* OpenUDID.m in Sources */,
+				A0E6A6092B2FEF0600645913 /* SVProgressAnimatedView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A0E6A1912B2FEDD000645913 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A0E6A1922B2FEDD000645913 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A0E6A1962B2FEDD100645913 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A0E6A1972B2FEDD100645913 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A0E6A19C2B2FEDD100645913 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A0E6A19D2B2FEDD100645913 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A0E6A19F2B2FEDD100645913 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4098759FF12010E3C19BD570 /* Pods-GJLocalDigitalSDKDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RHWTKM535Q;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GJLocalDigitalSDKDemo/GJLocalDigitalSDK",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GJLocalDigitalSDKDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SDKDemo;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "需要录音权限来语音识别";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wanruyi.sdkdemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A0E6A1A02B2FEDD100645913 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11014F45554AF6DBA87472A4 /* Pods-GJLocalDigitalSDKDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RHWTKM535Q;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GJLocalDigitalSDKDemo/GJLocalDigitalSDK",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GJLocalDigitalSDKDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SDKDemo;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "需要录音权限来语音识别";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wanruyi.sdkdemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A0E6A1802B2FEDD000645913 /* Build configuration list for PBXProject "GJLocalDigitalSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0E6A19C2B2FEDD100645913 /* Debug */,
+				A0E6A19D2B2FEDD100645913 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0E6A19E2B2FEDD100645913 /* Build configuration list for PBXNativeTarget "GJLocalDigitalSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0E6A19F2B2FEDD100645913 /* Debug */,
+				A0E6A1A02B2FEDD100645913 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A0E6A17D2B2FEDD000645913 /* Project object */;
+}
