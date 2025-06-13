@@ -1,0 +1,97 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'ai.guiji.duix.sdk.client.pro.demo'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "ai.guiji.duix.sdk.client.pro.demo"
+        minSdk 26
+        targetSdk 34
+        versionCode 6
+        versionName "1.0.5"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+        flavorDimensions "versionCode"
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('../demo.jks')
+            storePassword 'Ysyhl9t#'
+            keyAlias 'key0'
+            keyPassword 'Ysyhl9t#'
+        }
+        release {
+            storeFile file('../demo.jks')
+            storePassword 'Ysyhl9t#'
+            keyAlias 'key0'
+            keyPassword 'Ysyhl9t#'
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+
+            productFlavors {
+                guiji {}
+            }
+            applicationVariants.all { variant ->
+                variant.outputs.all {
+                    outputFileName = "duix-sdk-pro-demo_${variant.productFlavors[0].name}_v${variant.versionName}_${variant.buildType.name}.apk"
+                }
+            }
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.5.1'
+    }
+    packaging {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+    lintOptions {
+        disable "NotificationPermission"
+    }
+}
+
+dependencies {
+
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
+    implementation "androidx.activity:activity:1.3.0"
+    implementation "androidx.fragment:fragment:1.3.0"
+
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+
+    implementation 'org.java-websocket:Java-WebSocket:1.5.1'    // 可选，在LiveKit交互模式中需要该依赖
+    implementation 'com.auth0:java-jwt:3.18.1'                  // 必选，需要的签名工具
+}

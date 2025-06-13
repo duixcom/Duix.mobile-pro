@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">DUIX-SDK-PRO</string>
+    <string name="base_app_id_title">appID:</string>
+    <string name="base_app_key_title">appKey:</string>
+    <string name="base_conversation_title">conversationID:</string>
+    <string name="base_config_path">BaseConfig Url:</string>
+    <string name="model_path">Model Url:</string>
+    <string name="pcm_stream_play">PCM Stream Play</string>
+    <string name="loading">Loading...</string>
+    <string name="need_permission">Need to obtain permission to continue</string>
+    <string name="live_kit_play">LiveKit Play</string>
+</resources>

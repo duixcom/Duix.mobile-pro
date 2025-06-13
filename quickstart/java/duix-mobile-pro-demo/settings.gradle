@@ -1,0 +1,2 @@
+rootProject.name = "duix-pro-demo"
+include ':app'

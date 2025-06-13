@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="italic|bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSdkVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvSdkVersion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/tv_app_id_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/base_app_id_title"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_app_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="your appId"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_app_id_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_conversation_title"
+                app:layout_constraintTop_toTopOf="@+id/tv_app_id_title" />
+
+
+            <TextView
+                android:id="@+id/tv_app_key_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/base_app_key_title"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_app_id_title" />
+
+            <EditText
+                android:id="@+id/et_app_key"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="your appKey"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_app_key_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_conversation_title"
+                app:layout_constraintTop_toTopOf="@+id/tv_app_key_title" />
+
+
+            <TextView
+                android:id="@+id/tv_conversation_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/base_conversation_title"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_app_key_title" />
+
+            <EditText
+                android:id="@+id/etConversationId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:hint="your conversation(LiveKit)"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_conversation_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_conversation_title"
+                app:layout_constraintTop_toTopOf="@+id/tv_conversation_title" />
+
+
+            <TextView
+                android:id="@+id/tvBaseConfigInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/base_config_path"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etConversationId"  />
+
+            <EditText
+                android:id="@+id/etBaseConfigUrl"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="https://github.com/duixcom/Duix.mobile/releases/download/v1.0.0/gj_dh_res.zip"
+                android:textSize="11sp"
+                app:layout_constraintTop_toBottomOf="@+id/tvBaseConfigInfo"
+                />
+
+            <TextView
+                android:id="@+id/tvModelInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/model_path"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etBaseConfigUrl"  />
+
+            <EditText
+                android:id="@+id/etModelUrl"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="https://github.com/duixcom/Duix.mobile/releases/download/v1.0.0/bendi3_20240518.zip"
+                android:textSize="11sp"
+                app:layout_constraintTop_toBottomOf="@+id/tvModelInfo"
+                />
+
+            <Button
+                android:id="@+id/btnPlay"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/pcm_stream_play"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etModelUrl" />
+
+            <Button
+                android:id="@+id/btnLiveKit"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/live_kit_play"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnPlay" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
