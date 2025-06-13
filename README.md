@@ -6,8 +6,7 @@
 1. [Introduction](#1-introduction)  
 2. [Features](#2-features)  
 3. [Documentation](#3-documentation)  
-4. [Demo Download](#4-demo-download)  
-5. [Contact Us](#5-contact-us)  
+4. [Contact Us](#5-contact-us)  
 
 ---
 
@@ -36,15 +35,10 @@ Upgrade to Mobile-Pro today and experience AI like never before![Learn more！](
 
 ## 3. Documentation  
 - ​**Android Developer**: [Mobile-Pro-SDK (Android)](#)  
-- ​**IOS Developer**: [Mobile-Pro-SDK (IOS)](#)  
+- ​**IOS Developer**: [Mobile-Pro-SDK (IOS)](https://github.com/duixcom/Duix.mobile-pro/blob/main/quickstart/ios/README.md)  
 
 ---
 
-## 4. Demo Download  
-- ​**Android Demo**: [Mobile-Pro Demo (Android)](#)
-- ​**IOS Demo**: [Mobile-Pro Demo (IOS)](#)
 
----
-
-## 5. Contact Us  
+## 4. Contact Us  
 For questions, ​**raise an issue**​ or email [james@duix.com](mailto:james@duix.com).  
