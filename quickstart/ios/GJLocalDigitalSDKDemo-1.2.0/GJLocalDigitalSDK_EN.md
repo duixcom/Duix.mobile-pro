@@ -1,18 +1,18 @@
-## 硅基本地版DUIX-PRO SDK使⽤⽂档 (1.2.0)
+## Silicon Basic Edition DUIX SDK Usage Document (1.2.0)
     
-### 物料准备
+###  Supported Systems and Hardware Versions
  GJLocalDigitalSDK.framework  (-Embed & Sign)
  
 
  
       
 
-### 开发环境
-开发⼯具: Xcode  ios12.0以上 iphoneX及以上
+### Development Environment
+Development Tool: Xcode ios12.0 and above iphone8 and above
 
-## 快速开始
+## Quick Start
 ```
-    //授权
+
        [GJLDigitalConfig shareConfig].appName= [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
     [GJLDigitalConfig shareConfig].userId = [NSString stringWithFormat:@"sdk_%@",[OpenUDID value]];
 
@@ -51,7 +51,7 @@
              }
             else
             {
-                [SVProgressHUD showInfoWithStatus:@"模型初始化失败"];
+                [SVProgressHUD showInfoWithStatus:@"model fail"];
             }
      
         }
@@ -62,148 +62,139 @@
             
     }];
 ```
-## 调用流程
+## Call process
 ```
-1. 启动服务前需要准备好授权的appId,appKey以及同步数字人需要的基础配置和模型文件。
-2. 使用授权接口授权。
-3. 初始化数字人渲染服务。
-4. 调用toStart函数开始渲染数字人
-5. 调用toSpeakWithPath函数驱动数字人播报。
-6. 调用cancelAudioPlay函数可以主动停止播报。
-7. 调用toStop结束并释放数字人渲染
+1. Prepare the basic configuration and model files required for the synchronous digital person before starting the service.
+2. Initialize the digital person rendering service.
+3. Call the toStart function to start rendering the digital person
+4. Call the toSpeakWithPath function to drive the digital person to broadcast.
+5. Call cancelAudioPlay to actively stop broadcasting.
+6. Call toStop to end and release the digital person rendering
 ```
 
-### SDK回调
+### SDK Callback
 
 ```
 /*
-*数字人渲染报错回调
-*0 未授权 -1未初始化 50009资源超时或未配置
+*Digital person rendering error callback
+*-1 uninitialized 50009 resource timeout or not configured
 */
 @property (nonatomic, copy) void (^playFailed)(NSInteger code,NSString *errorMsg);
 
 /*
-*音频播放结束回调
+*Audio playback end callback 
 */
 @property (nonatomic, copy) void (^audioPlayEnd)(void);
 
 /*
-*音频播放进度回调
+*Audio playback progress callback 
 /
 @property (nonatomic, copy) void (^audioPlayProgress)(float current,float total);
 ```
 
-## 方法
+## Methods
 
-### 授权
+### Auth
 
 ```
 /*
-*appId 对应应用的APPID
-*appKey 对应应用的密钥
-*isSuccess YES 返回成功 NO返回失败
-*errorMsg 错误原因
-*/
+ * appId The APPID of the corresponding application
+ * appKey The secret key of the corresponding application
+ * isSuccess YES means success, NO means failure
+ * errorMsg Error message
+ */
 - (void)initWithAppId:(NSString *)appId appKey:(NSString *)appKey block:(void (^) (BOOL isSuccess, NSString *errorMsg))block;
 ```
 
-### 初始化
+### Initialization
 
 ```
 /*
-*basePath 底层通用模型路径-保持不变
-*digitalPath 数字人模型路径- 替换数字人只需要替换这个路径
-*return 1 返回成功 0未授权 -1 初始化失败
-*showView 显示界面
+*basePath Base common model path - remains unchanged
+*digitalPath Digital person model path - only need to replace this path to replace the digital person
+*return 1 Success  -1 Initialization failed
+*showView Display interface
 */
 -(NSInteger)initBaseModel:(NSString*)basePath digitalModel:(NSString*)digitalPath showView:(UIView*)showView;
 ```
 
-### 替换背景
+### Replace background
 
 ```
 /*
-* bbgPath 替换背景 
-* 注意: -jpg格式 ----背景size等于数字人模型的getDigitalSize-----------
+* bbgPath Replace background
+* Note: -jpg format ----Background size equals the digital person model's getDigitalSize-----------
 */
 -(void)toChangeBBGWithPath:(NSString*)bbgPath;
 ```
 
-### 播放音频
+
+### Start rendering digital person
 
 ```
 /*
-*wavPath 音频的本地路径 
-*/
--(void)toSpeakWithPath:(NSString*)wavPath;
-```
-
-### 开始渲染数字人
-
-```
-/*
-*开始
+*Start
 */
 -(void)toStart:(void (^) (BOOL isSuccess, NSString *errorMsg))block;
 ```
 
-### 结束渲染数字人并释放
+### End rendering digital person and release
 ```
 /*
-*结束
+*End
 */
 -(void)toStop;
 ```
 
-### 数字人模型的宽度高度
+### Width and height of digital person model
 
 ```
 /*
-*初始化模型过后才能获取
-*getDigitalSize 数字人模型的宽度 数字人模型的高度
+*After initializing the model, you can get it
+*getDigitalSize Width of digital person model Height of digital person model
 */
 -(CGSize)getDigitalSize;
 ```
 
-### 取消播放音频
+### Cancel playing audio
 
 ```
 /*
-*取消播放音频
+*Cancel playing audio
 */
 -(void)cancelAudioPlay;
 ```
 
 
 
-### 授权成功
+### Authorization Success
 
 ```
 /*
-*是否授权成功
+* Check if authorization is successful
 */
 -(NSInteger)isGetAuth;
 ```
 
-### PCM流式
+### PCM Streaming
 
 ```
 /*
-*开始录音和播放
+* Start recording and playback
 */
 -(void)toStartRuning;
 ```
 
 ```
 /*
-*一句话或一段话的初始化session
+* Initialize session for a sentence or paragraph
 */
 -(void)newSession;
 ```
 
 ```
 /*
-*一句话或一段话的推流结束调用finishSession 而非播放结束调用
+* Call finishSession when streaming ends (not when playback ends)
 */
 -(void)finishSession;
 ```
@@ -211,14 +202,14 @@
 
 ```
 /*
-*finishSession 结束后调用续上continueSession
+* Continue session after finishSession
 */
 -(void)continueSession;
 ```
 
 ```
 /*
-*是否静音
+* Mute/unmute
 */
 -(void)toMute:(BOOL)isMute;
 ```
@@ -226,16 +217,16 @@
 
 ```
 /*
-*pcm
-*size
-* 参考toSpeakWithPath 转换成pcm的代码
+* pcm
+* size
+* Refer to toSpeakWithPath for PCM conversion code
 */
 -(void)toWavPcmData:(NSData*)audioData;
 ```
 
 ```
 /*
-*清空buffer
+* Clear audio buffer
 */
 -(void)clearAudioBuffer;
 ```
@@ -243,7 +234,7 @@
 
 ```
 /*
-*暂停播放音频流
+* Pause PCM audio streaming
 */
 -(void)toPausePcm;
 ```
@@ -251,7 +242,7 @@
 
 ```
 /*
-*恢复播放音频流
+* Resume PCM audio streaming
 */
 -(void)toResumePcm;
 ```
@@ -259,119 +250,119 @@
 
 ```
 /*
-* 是否启用录音
- */
+* Enable/disable recording
+*/
 -(void)toEnableRecord:(BOOL)isEnable;
 ```
 
 
 ```
 /*
-* 开始音频流播放
+* Start audio streaming playback
 */
 - (void)startPlaying;
 ```
 
 ```
 /*
-* 结束音频流播放
+* Stop audio streaming playback
 */
 - (void)stopPlaying:(void (^)( BOOL isSuccess))success;
 ```
 
 
-## 动作
+## Actions
 
-### 随机动作
+### Random Action
  
 ```
 /*
-* 开始动作前调用
-* 随机动作（一段文字包含多个音频，建议第一个音频开始时设置随机动作）
-* return 0 数字人模型不支持随机动作 1 数字人模型支持随机动作
+* Call before starting action
+* Random action (for text containing multiple audio segments, recommended to set at first audio start)
+* return 0 - digital human model doesn't support random action 1 - supported
 */
 -(NSInteger)toRandomMotion;
 ```
 
-### 开始动作
+### Start Action
 
 ```
 /*
-* 开始动作 （一段文字包含多个音频，第一个音频开始时设置）
-* return 0  数字人模型不支持开始动作 1  数字人模型支持开始动作
+* Start action (for text containing multiple audio segments, set at first audio start)
+* return 0 - digital human model doesn't support start action 1 - supported
 */
 -(NSInteger)toStartMotion;
 ```
 
-### 结束动作
+### Stop Action
 ```
 /*
-* 结束动作 （一段文字包含多个音频，最后一个音频播放结束时设置）
-*isQuickly YES 立即结束动作   NO 等待动作播放完成再静默
-*return 0 数字人模型不支持结束动作  1 数字人模型支持结束动作
+* Stop action (for text containing multiple audio segments, set when last audio playback ends)
+* isQuickly YES - end action immediately NO - wait for action to complete before silence
+* return 0 - digital human model doesn't support stop action 1 - supported
 */
 -(NSInteger)toSopMotion:(BOOL)isQuickly;
 ```
 
-### 暂停后开始播放数字人
+### Resume Digital Human Playback
 ```
 /*
-*暂停后才需执行播放数字人
+* Only needed after pausing digital human
 */
 -(void)toPlay;
 ```
 
-### 暂停数字人播放
+### Pause Digital Human Playback
 ```
 /*
-*暂停数字人播放
+* Pause digital human playback
 */
 -(void)toPause;
 ```
 
-## 语音识别 
+## Speech Recognition 
 
-### 初始化录音和ASR
+### Initialize Recording and ASR
 
 ```
 /*
-*初始化录音和ASR
+* Initialize recording and ASR
 */
 -(void)initASR;
 ```
 
-### 开始识别
+### Start Recognition
 
 ```
 /*
-*开始识别
+* Start recognition
 */
 -(void)toOpenAsr;
 ```
 
-### 停止识别
+### Stop Recognition
 
 ```
 /*
-*停止识别
+* Stop recognition
 */
 -(void)toCloseAsr;
 ```
 
-### 语音识别回调
+### Speech Recognition Callbacks
 
 ```
 @property (nonatomic, copy) void (^asrBlock)(NSString * asrText,BOOL isFinish);
 
 /*
- *data 录音返回 单声道 1   采样率 16000
+ * data - recorded data (mono, 16000Hz sample rate)
  */
 @property (nonatomic, copy) void (^recordDataBlock)(NSData * data);
 
 
 
 /*
- *音量回调
+ * Volume callback
  */
 @property (nonatomic, copy) void (^rmsBlock)(float rms);
 
@@ -379,54 +370,54 @@
 @property (nonatomic, copy) void (^errBlock)(NSError *err);
 
 /*
- * 服务端开始推送音频流
+ * Server starts pushing audio stream
  */
 @property (nonatomic, copy) void (^startPushBlock)(void);
 /*
- *data 服务端返回音频流 单声道 1   采样率 16000
+ * data - server returns audio stream (mono, 16000Hz sample rate)
  */
 @property (nonatomic, copy) void (^pushDataBlock)(NSData * data);
 /*
- *服务端停止推送音频流
+ * Server stops pushing audio stream
  */
 @property (nonatomic, copy) void (^stopPushBlock)(void);
 
 /*
- *大模型返回文字
+ * Large model returns text
  */
 @property (nonatomic, copy) void (^speakTextBlock)(NSString * speakText);
 
 /*
- *返回动作标记
+ * Returns action marker
  */
 @property (nonatomic, copy) void (^motionBlock)(NSString * motionText);
 ```
 
-## 版本记录
+## Version History
 
 **1.2.0**
 ```
-1. 支持pcm流式
+1. Added PCM streaming support
 ```
 
 **1.0.3**
 ```
-1. 数字人背景透明
-2. 解压内存问题
+1. Digital human background transparency
+2. Fixed memory issues during decompression
 ```
 
 **1.0.2**
 ```
-1. 问答
-2. 语音识别
-3. 文字合成
-4. 说话动作
+1. Q&A functionality
+2. Speech recognition
+3. Text synthesis
+4. Speaking animations
 ```
 
 
 **1.0.1**
 ```
-1. 数字人本地授权和初始化
-2. 数字人本地渲染
-3. 音频播放和驱动嘴形
+1. Local authorization and initialization for digital human
+2. Local rendering for digital human
+3. Audio playback and lip-sync driving
 ```
