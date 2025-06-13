@@ -8,7 +8,7 @@
       
 
 ### 开发环境
-开发⼯具: Xcode  ios12.0以上 iphoneX及以上
+开发⼯具: Xcode  ios12.0以上 iphone8及以上
 
 ## 快速开始
 ```
@@ -129,14 +129,7 @@
 -(void)toChangeBBGWithPath:(NSString*)bbgPath;
 ```
 
-### 播放音频
 
-```
-/*
-*wavPath 音频的本地路径 
-*/
--(void)toSpeakWithPath:(NSString*)wavPath;
-```
 
 ### 开始渲染数字人
 

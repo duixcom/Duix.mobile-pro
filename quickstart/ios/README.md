@@ -399,25 +399,3 @@ Development Tool: Xcode ios12.0 and above iphone8 and above
 ```
 1. Added PCM streaming support
 ```
-
-**1.0.3**
-```
-1. Digital human background transparency
-2. Fixed memory issues during decompression
-```
-
-**1.0.2**
-```
-1. Q&A functionality
-2. Speech recognition
-3. Text synthesis
-4. Speaking animations
-```
-
-
-**1.0.1**
-```
-1. Local authorization and initialization for digital human
-2. Local rendering for digital human
-3. Audio playback and lip-sync driving
-```
