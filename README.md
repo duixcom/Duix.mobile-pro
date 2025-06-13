@@ -13,7 +13,7 @@
 ## 1. Introduction  
 Mobile-Pro takes intelligent interaction to the next level, building on the solid foundation of our Open-Source Version. It introduces cutting-edge features like multi-action control and expanded device authorization. Perfect for businesses and developers looking for a high-performance, future-proof AI solution.
 
-Upgrade to Mobile-Pro today and experience AI like never before[Learn more](https://duix.com/mpro) 🚀
+Upgrade to Mobile-Pro today and experience AI like never before [Learn more](https://duix.com/mpro) 🚀
 
 ---
 
