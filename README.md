@@ -34,7 +34,7 @@ Upgrade to Mobile-Pro today and experience AI like never before![Learn more！](
 ---
 
 ## 3. Documentation  
-- ​**Android Developer**: [Mobile-Pro-SDK (Android)](#)  
+- ​**Android Developer**: [Mobile-Pro-SDK (Android)](https://github.com/duixcom/Duix.mobile-pro/blob/main/quickstart/java/README.md)  
 - ​**IOS Developer**: [Mobile-Pro-SDK (IOS)](https://github.com/duixcom/Duix.mobile-pro/blob/main/quickstart/ios/README.md)  
 
 ---
