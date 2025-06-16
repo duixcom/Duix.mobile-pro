@@ -33,7 +33,7 @@ Mobile-Pro在开源版本的基础上，将数字人智能交互提升至全新�
 
 ## 3. 开发文档  
 - ​**Android开发者**​：[Mobile-Pro-SDK (Android)](https://github.com/duixcom/Duix.mobile-pro/blob/main/quickstart/java/duix-mobile-pro-demo/README_zh.md)  
-- ​**IOS开发者**​：[Mobile-Pro-SDK (IOS)](https://github.com/duixcom/Duix.mobile-pro/blob/main/quickstart/ios/README.md)  
+- ​**IOS开发者**​：[Mobile-Pro-SDK (IOS)](https://github.com/duixcom/Duix.mobile-pro/blob/main/quickstart/ios/README_zh.md)  
 
 ---
 
