@@ -360,6 +360,7 @@ public void startPush()
 
 public void pushPcm(byte[] buffer)
 
+// 注意这个不是停止播放，而是停止推送，已经推送的音频会继续播放。
 public void stopPush()
 ```
 
@@ -378,7 +379,16 @@ val thread = Thread {
 thread.start()
 ```
 
-### 5. 数字人播放动作
+### 5. 停止音频播放
+函数定义:
+ai.guiji.duix.sdk.client.pro.Player
+
+```
+// 调用该函数已经推送的音频会被丢弃，立刻恢复到静默状态
+public void stopPlayAudio()
+```
+
+### 6. 数字人播放动作
 
 播放动作需要模型支持动作标签，在初始化成功的回调中可以看到模型信息。
 
@@ -402,7 +412,7 @@ public void requireMotion(String name, boolean now)
 player?.requireMotion("打招呼")
 ```
 
-### 6. 音量控制
+### 7. 音量控制
 
 音量控制范围0.0F~1.0F, 0.0F: 静音、1.0F: 最大音量
 

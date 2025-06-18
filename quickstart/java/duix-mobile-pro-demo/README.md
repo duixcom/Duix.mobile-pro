@@ -372,7 +372,16 @@ val thread = Thread {
 thread.start()
 ```
 
-### 4.5. Digital Human Motion Playback
+### 4.5. Stop audio playback
+Function definition:
+`ai.guiji.duix.sdk.client.pro.Player`
+
+```
+//The audio already pushed by calling this function will be discarded and immediately restored to a silent state
+public void stopPlayAudio()
+```
+
+### 4.6. Digital Human Motion Playback
 
 Motion playback requires the model to support motion tags. Model information can be viewed in the initialization success callback.
 
@@ -396,7 +405,7 @@ Call example:
 player?.requireMotion("Greeting")
 ```
 
-### 4.6. Volume Control
+### 4.7. Volume Control
 
 Volume control range: 0.0F~1.0F, where 0.0F is mute and 1.0F is maximum volume.
 
