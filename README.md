@@ -4,9 +4,10 @@
 
 ## Table of Contents
 1. [Introduction](#1-introduction)  
-2. [Features](#2-features)  
-3. [Documentation](#3-documentation)  
-4. [Contact Us](#5-contact-us)  
+2. [Features](#2-features)
+3. [Custom Purchase](#3-custom-purchase)
+4. [Documentation](#4-documentation)  
+5. [Contact Us](#5-contact-us)  
 
 ---
 
@@ -30,15 +31,20 @@ Upgrade to Mobile-Pro today and experience AI like never before [Learn more](htt
 | ​**Digital Human Support**​      | ❌ Not Available             | ✅ Multi-Action Digital Human Support |
 | ​**Device Compatibility**​       | ⚠️ Standard                  | ✅ Expanded Device Compatibility        |
 
-- ​**If you're excited about it, get yours now!**:[Buy Now!](https://duix.com/mpro?lang=en)
 ---
 
-## 3. Documentation  
+## 3. Custom Purchase
+- ​**If you're excited about it, get yours now!**:[Buy Now!](https://duix.com/mpro?lang=en)
+![pricing](./img/price_en.png )
+
+---
+
+## 4. Documentation  
 - ​**Android Developer**: [Mobile-Pro-SDK (Android)](https://github.com/duixcom/Duix.mobile-pro/blob/main/quickstart/java/README.md)  
 - ​**IOS Developer**: [Mobile-Pro-SDK (IOS)](https://github.com/duixcom/Duix.mobile-pro/blob/main/quickstart/ios/README.md)  
 
 ---
 
 
-## 4. Contact Us  
+## 5. Contact Us  
 For questions, ​**raise an issue**​ or email [james@duix.com](mailto:james@duix.com).  
