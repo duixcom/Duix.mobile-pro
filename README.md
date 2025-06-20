@@ -35,7 +35,7 @@ Upgrade to Mobile-Pro today and experience AI like never before [Learn more](htt
 
 ## 3. Custom Purchase
 - ​**If you're excited about it, get yours now!**:[Buy Now!](https://duix.com/mpro?lang=en)
-[![pricing]](img/price_en.jpg)
+[![pricing]](https://github.com/duixcom/Duix.mobile-pro/blob/main/img/price-en.jpg)
 
 ---
 
