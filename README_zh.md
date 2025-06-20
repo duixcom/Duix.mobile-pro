@@ -33,7 +33,7 @@ Mobile-Pro在开源版本的基础上，将数字人智能交互提升至全新�
 
 ## 3. 定制购买
 - ​**立即获取Mobile-Pro版**​：[立即购买！](http://duix.com/mpro?lang=zh)
-[![pricing]](https://github.com/duixcom/Duix.mobile-pro/blob/main/img/price-en.jpg)
+[![pricing]](https://github.com/duixcom/Duix.mobile-pro/blob/main/img/price-cn.jpg)
   
 ---
 
